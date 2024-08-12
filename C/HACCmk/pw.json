@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "analyses": [
+        {
+            "match": "main.c",
+            "dependencies": [
+                "Step10_orig.c"
+            ]
+        },
+	    {
+            "match": "*.c",
+	        "command": "gcc %f -I include"
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+This is an OMP scaling benchmark for the short force evaluation kernel 
+of the HACC application. It is a single-node job without MPI.
+
+The compile options are specified in correspondent Makefile. 
+CFLAGS_KERNEL variable should include aggressive optimization 
+options without recognition of OpenMP directives. CFLAGS_MAIN variable
+should specify the least aggressive set of optimization options to
+prevent optimization of the timing statement in the main program.
+This variable must include the option that recognizes OpenMP directives.
+
+The timing routine should be changed to the one appropriate for 
+a platform. This benchmark uses a low level CPU clock accurate resolution
+timer
+
+long long int timebase()
+
+Conversion from CPU cycles to seconds is performed with the help of a 
+conversion coefficient "MHz", defined in main.c:16.
+
+Submition scrips are written for Cobalt scheduler - the standard utility
+used in Argonne Leadership Computing Facility. Upon submission, the number of
+threads should be specified with standard OMP_NUM_THREADS env. variable. 
+The benchmark reports the number of used OpenMP threads, the computation 
+run time, the result of the computation, as well as self verification of the
+result. The typical output for a Blue Gene/Q node was obtained with the 
+provided CheckAll script. Similar results are exepected upon response.
+
+Number of OMP threads 1
+Kernel elapsed time, s:       210.85903916
+Total  elapsed time, s:       211.04163578
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Number of OMP threads 2
+Kernel elapsed time, s:       105.41948631
+Total  elapsed time, s:       105.60241941
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Number of OMP threads 4
+Kernel elapsed time, s:        53.13009598
+Total  elapsed time, s:        53.31305897
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Number of OMP threads 8
+Kernel elapsed time, s:        26.69305273
+Total  elapsed time, s:        26.87610440
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Number of OMP threads 16
+Kernel elapsed time, s:        13.76628785
+Total  elapsed time, s:        13.94928015
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Number of OMP threads 32
+Kernel elapsed time, s:         9.46185759
+Total  elapsed time, s:         9.64484288
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Number of OMP threads 64
+Kernel elapsed time, s:         7.36997379
+Total  elapsed time, s:         7.55316004
+Result validation: 6636045675.12190628
+Result expected  : 6636045675.12190628
+
+Thank you,
+
+Vitali Morozov
+morozov@anl.gov
+Argonne Leadership Computing Facility
+Argonne IL 60439

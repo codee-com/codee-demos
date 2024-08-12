@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in 01th 02th 04th 08th 16th 32th 64th
+do
+    cd $i
+    pwd
+    ./RunMe_${i}.sh
+    cd ..
+done    

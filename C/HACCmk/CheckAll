@@ -1,0 +1,25 @@
+#!/bin/bash
+
+for i in 1 2 4 8 
+do
+    cd 0${i}th
+    grep "Number of OMP threads" HACCmk_1_${i}.output
+    grep "Kernel elapsed time" HACCmk_1_${i}.output
+    grep "Total  elapsed time" HACCmk_1_${i}.output
+    grep "Result validation" HACCmk_1_${i}.output
+    grep "Result expected" HACCmk_1_${i}.output
+    echo
+    cd ..
+done    
+
+for i in 16 32 64
+do
+    cd ${i}th
+    grep "Number of OMP threads" HACCmk_1_${i}.output
+    grep "Kernel elapsed time" HACCmk_1_${i}.output
+    grep "Total  elapsed time" HACCmk_1_${i}.output
+    grep "Result validation" HACCmk_1_${i}.output
+    grep "Result expected" HACCmk_1_${i}.output
+    echo
+    cd ..
+done    
