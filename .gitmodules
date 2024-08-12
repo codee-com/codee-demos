@@ -1,0 +1,3 @@
+[submodule "C/MbedTLS"]
+	path = C/MbedTLS
+	url = https://github.com/Mbed-TLS/mbedtls.git
