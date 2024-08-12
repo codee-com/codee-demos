@@ -1,0 +1,25 @@
+FC            = gfortran
+FCFFLAGS      =	-fPIC -fno-second-underscore -O2 -fdefault-real-8 -fdefault-double-8
+CC            =	gcc
+CCFLAGS       =	-O2
+CPP           =	cpp -P
+CPPFLAGS      =	-DREAL8 -DENDIAN_IO -DTIMER -DRELO -DEOS_SIG0 -DEOS_7T
+LD            =	$(FC)
+LDFLAGS       =	$(FCFFLAGS)
+EXTRALIBS     = 
+
+#
+# --- generic make definitions
+#
+SHELL         = /bin/sh
+RM            = \rm -f
+
+#
+# rules.
+#
+
+.c.o:
+	$(CC) $(CPPFLAGS) $(CCFLAGS)  -c $*.c
+
+.F90.o:
+	$(FC) $(CPPFLAGS) $(FCFFLAGS) -c $*.F90
