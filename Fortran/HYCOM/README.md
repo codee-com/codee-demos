@@ -13,22 +13,4 @@ $ cd src
 $ bear
 ```
 
-2. Use `codee screening` to obtain a high-level overview of the project:
-
-```bash
-$ codee screening --include-categories all --config compile_commands.json
-```
-
-3. Use `codee checks --verbose` to further investigate the checkers
-identified by Codee:
-
-```bash
-$ codee checks --verbose --include-categories all --config compile_commands.json
-```
-
-4. Use `codee checks --verbose --level 1` to focus on the most severe
-checkers identified by Codee:
-
-```bash
-$ codee checks --verbose --level 1 --include-categories all --config compile_commands.json
-```
+2. Analyze it with Codee: [HYCOM modernization guide](https://docs.codee.com/demos/fortran/modernization/hycom)
