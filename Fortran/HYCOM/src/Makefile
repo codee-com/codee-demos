@@ -1,3 +1,12 @@
+# Default shortcut for Codee demos:
+ARCH ?= codee
+TYPE ?= demo
+
+all: hycom
+clean:
+	rm -f *.o *.mod hycom
+.PHONY: clean
+
 #
 # --- HYCOM 2.2 makefile 
 #
