@@ -9,7 +9,8 @@
 1. Compile HYCOM and obtain its `compile_commands.json` file:
 
 ```bash
-$ cd src && bear -- make ARCH=codee TYPE=demo
+$ cd src
+$ bear
 ```
 
 2. Use `codee screening` to obtain a high-level overview of the project:
