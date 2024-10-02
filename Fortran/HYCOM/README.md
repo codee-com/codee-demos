@@ -10,7 +10,7 @@
 
 ```bash
 $ cd src
-$ bear
+$ bear -- make
 ```
 
 2. Analyze it with Codee: [HYCOM modernization guide](https://docs.codee.com/demos/fortran/modernization/hycom)
