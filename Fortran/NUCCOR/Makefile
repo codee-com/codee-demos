@@ -1,4 +1,4 @@
-FC ?= gfortran
+FC = gfortran
 FLAGS ?= -O3 -fopenmp
 objects = mtc_patch.o mtc.o mtc_openmp.o mtc_main.o
 

@@ -3,7 +3,7 @@ SOURCES = matmul.f90 time.f90
 FILE ?= main.f90
 TARGET ?= matmul
 FFLAGS = -O3
-FC ?= gfortran
+FC = gfortran
 
 default: run
 

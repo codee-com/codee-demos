@@ -1,4 +1,4 @@
-FC ?= gfortran
+FC = gfortran
 FFLAGS ?= -O3
 SRC = himeno.f90
 TARGET ?= himeno
