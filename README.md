@@ -5,4 +5,4 @@ demonstrate how [Codee](https://www.codee.com/) can help modernize and optimize
 codebases.
 
 For step-by-step guides on how to analyze these projects, check out our
-[Documentation](https://docs.codee.com/guides)!
+[Documentation](https://docs.codee.com/quickstarts/)!
