@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codee Report Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="codee_report.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Codee Report Analysis</h1>
+        <p>Analyzed ${REPORT_COUNT} reports from ${INPUT_DIR}</p>
+      </header>
+
+      <div class="summary">
+        <div class="summary-card">
+          <div class="value">${REPORT_COUNT}</div>
+          <div class="label">Reports</div>
+        </div>
+        <div class="summary-card">
+          <div class="value">${CHECKER_COUNT}</div>
+          <div class="label">Unique Checkers Found</div>
+        </div>
+        <div class="summary-card">
+          <div class="value">${TOTAL_FINDINGS}</div>
+          <div class="label">Findings (Latest Report)</div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h2>Total Findings Over Time</h2>
+        <div class="chart-wrapper">
+          <canvas id="totalChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h2>Findings by Checker</h2>
+        <div class="chart-wrapper">
+          <canvas id="checkerChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h2>Findings by Priority Level</h2>
+        <div class="chart-wrapper">
+          <canvas id="priorityChart"></canvas>
+        </div>
+      </div>
+
+      <div class="links-section" id="linksSection">
+        <h2>Original Codee Reports</h2>
+        <table class="links-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Report</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="linksTableBody">
+          </tbody>
+        </table>
+      </div>
+
+      <footer>Generated with Codee Report Analyzer</footer>
+    </div>
+
+    <script src="codee_report.js"></script>
+  </body>
+</html>

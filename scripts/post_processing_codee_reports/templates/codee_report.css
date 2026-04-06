@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #12181f;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-family: "Inter Extra Bold", "Inter", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+header p {
+  font-family: "Inter Light", "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #94a1b2;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.summary-card {
+  background: rgba(24, 32, 41, 0.84);
+  padding: 20px 30px;
+  border-radius: 12px;
+  border: 1px solid #2e363b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.summary-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.summary-card .label {
+  color: #94a1b2;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chart-container {
+  background: rgba(24, 32, 41, 0.84);
+  border: 1px solid #2e363b;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.chart-container h2 {
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #2e363b;
+  padding-bottom: 10px;
+}
+.chart-wrapper {
+  position: relative;
+  height: 350px;
+}
+
+.links-section {
+  background: rgba(24, 32, 41, 0.84);
+  border: 1px solid #2e363b;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.links-section h2 {
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #2e363b;
+  padding-bottom: 10px;
+}
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.links-table th,
+.links-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #2e363b;
+}
+.links-table th {
+  background: #182029;
+  font-weight: 600;
+  color: #94a1b2;
+}
+.links-table tr:hover {
+  background: #182029;
+}
+.links-table a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+.links-table a:hover {
+  text-decoration: underline;
+}
+.no-links {
+  color: #94a1b2;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  color: #94a1b2;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
