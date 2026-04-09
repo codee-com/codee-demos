@@ -2,6 +2,8 @@
 
 Analyze Codee reports over time and generate interactive HTML visualizations.
 
+![alt text](assets/sample_image.png)
+
 ## Overview
 
 This script analyzes multiple Codee reports, tracking how checker findings evolve over time.
